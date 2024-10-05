@@ -19,13 +19,13 @@ limitations under the License.
 package fake
 
 import (
-	samplecrdv1 "github.com/resouer/k8s-controller-custom-resource/pkg/apis/samplecrd/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	testing "k8s.io/client-go/testing"
+	samplecrdv1 "samplecrd-controller/pkg/apis/samplecrd/v1"
 )
 
 // FakeNetworks implements NetworkInterface
@@ -34,9 +34,9 @@ type FakeNetworks struct {
 	ns   string
 }
 
-var networksResource = schema.GroupVersionResource{Group: "samplecrd.k8s.io", Version: "v1", Resource: "networks"}
+var networksResource = schema.GroupVersionResource{Group: "samplecrd.x-k8s.io", Version: "v1", Resource: "networks"}
 
-var networksKind = schema.GroupVersionKind{Group: "samplecrd.k8s.io", Version: "v1", Kind: "Network"}
+var networksKind = schema.GroupVersionKind{Group: "samplecrd.x-k8s.io", Version: "v1", Kind: "Network"}
 
 // Get takes name of the network, and returns the corresponding network object, and an error if there is any.
 func (c *FakeNetworks) Get(name string, options v1.GetOptions) (result *samplecrdv1.Network, err error) {

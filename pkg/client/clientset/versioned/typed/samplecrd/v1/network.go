@@ -19,12 +19,12 @@ limitations under the License.
 package v1
 
 import (
-	v1 "github.com/resouer/k8s-controller-custom-resource/pkg/apis/samplecrd/v1"
-	scheme "github.com/resouer/k8s-controller-custom-resource/pkg/client/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	rest "k8s.io/client-go/rest"
+	v1 "samplecrd-controller/pkg/apis/samplecrd/v1"
+	scheme "samplecrd-controller/pkg/client/clientset/versioned/scheme"
 )
 
 // NetworksGetter has a method to return a NetworkInterface.

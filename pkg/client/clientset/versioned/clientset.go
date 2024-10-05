@@ -19,10 +19,10 @@ limitations under the License.
 package versioned
 
 import (
-	samplecrdv1 "github.com/resouer/k8s-controller-custom-resource/pkg/client/clientset/versioned/typed/samplecrd/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
+	samplecrdv1 "samplecrd-controller/pkg/client/clientset/versioned/typed/samplecrd/v1"
 )
 
 type Interface interface {

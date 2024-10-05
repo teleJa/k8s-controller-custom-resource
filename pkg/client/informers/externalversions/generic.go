@@ -21,9 +21,9 @@ package externalversions
 import (
 	"fmt"
 
-	v1 "github.com/resouer/k8s-controller-custom-resource/pkg/apis/samplecrd/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
+	v1 "samplecrd-controller/pkg/apis/samplecrd/v1"
 )
 
 // GenericInformer is type of SharedIndexInformer which will locate and delegate to other

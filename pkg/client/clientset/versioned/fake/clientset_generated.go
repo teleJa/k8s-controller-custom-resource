@@ -19,14 +19,14 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/resouer/k8s-controller-custom-resource/pkg/client/clientset/versioned"
-	samplecrdv1 "github.com/resouer/k8s-controller-custom-resource/pkg/client/clientset/versioned/typed/samplecrd/v1"
-	fakesamplecrdv1 "github.com/resouer/k8s-controller-custom-resource/pkg/client/clientset/versioned/typed/samplecrd/v1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"
 	fakediscovery "k8s.io/client-go/discovery/fake"
 	"k8s.io/client-go/testing"
+	clientset "samplecrd-controller/pkg/client/clientset/versioned"
+	samplecrdv1 "samplecrd-controller/pkg/client/clientset/versioned/typed/samplecrd/v1"
+	fakesamplecrdv1 "samplecrd-controller/pkg/client/clientset/versioned/typed/samplecrd/v1/fake"
 )
 
 // NewSimpleClientset returns a clientset that will respond with the provided objects.
